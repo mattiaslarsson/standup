@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-size: 1.5em;
+}
+
+h1 {
+  font-size: 2em;
+  color: black;
+  font-family: Arial, Sans-serif;
+}
+
+.addNamebuttonRef {
+  color: #343232;
+  font-weight: bold;
+}
+
+.input {
+  font-size: 1em;
+}
+
+.button {
+  background-color: #c0c0c0;
+  color: black;
+  font-weight: normal;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 10px;
+}
+
+#backToStart:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
