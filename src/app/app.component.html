@@ -1,4 +1,6 @@
-<a href="#">What's New</a>
+<span id="whatsnew" (click)="whatsNew()">What's New</span>
+<div *ngIf="whatsNewVisible"
+  class="alert"><span class="alertClose" (click)="closeWhatsNew()">X</span>{{whatsNewContent}}</div>
 <h1>Let's have a Standup</h1>
 <img class="logoImage" [src]="imageSource"/>
 <div *ngIf="!standupStarted">

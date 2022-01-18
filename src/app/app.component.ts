@@ -28,6 +28,8 @@ export class AppComponent {
   imageSource = this.defaultImageSource;
   alarmSource = 'assets/sound/alarm.wav';
   audio;
+  whatsNewContent = `2022-02-18 - Added sound to alert when a speaker's time is up`;
+  whatsNewVisible = false;
 
   constructor() {
     this.getNames();
@@ -106,5 +108,13 @@ export class AppComponent {
     this.standupFinished = false;
     this.getNames();
     this.imageSource = this.defaultImageSource;
+  }
+
+  whatsNew = () => {
+    this.whatsNewVisible = true;
+  }
+
+  closeWhatsNew = () => {
+    this.whatsNewVisible = false;
   }
 }
