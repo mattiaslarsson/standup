@@ -26,9 +26,18 @@ export class AppComponent {
   finishedImageSource = 'assets/laughing.jpg';
   talkingImageSource = 'assets/talking.jpg';
   imageSource = this.defaultImageSource;
+  alarmSource = 'assets/sound/alarm.wav';
+  audio;
 
   constructor() {
     this.getNames();
+    this.initAudio();
+  }
+
+  initAudio() {
+    this.audio = new Audio();
+    this.audio.src = this.alarmSource;
+    this.audio.load();
   }
 
   getNames = () => {
@@ -70,6 +79,7 @@ export class AppComponent {
       this.speakingTime--;
       if (this.speakingTime < 0) {
         this.timeExceeded = true;
+        this.audio.play();
         clearInterval(this.intervalId);
       }
       this.totalTime++;
